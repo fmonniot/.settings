@@ -1,0 +1,48 @@
+#!/bin/bash
+
+###############################################################################
+#                                                                             #
+#                   F. MONNIOT SETTINGS - INSTALL SCRIPT                      #
+#                                                                             #
+###############################################################################
+# 
+# Create all symlinks needed for personnalized configuration
+#
+SETTINGS_DIR="$HOME/.settings"
+echo $SETTINGS_DIR
+
+### GIT CONFIG
+hash git 2>&- || { echo >&2 "Missing Git!"; exit 1; }
+
+if [ ! -d $SETTINGS_DIR ]; then
+  git clone -q https://github.com/francoismonniot/.settings.git $SETTINGS_DIR
+  [ ! -d $SETTINGS_DIR ] && { echo "Could not clone the settings repository."; exit 1; }
+else
+  cd $SETTINGS_DIR && git pull -q
+fi
+
+### ZSH CONFIG ###
+echo "Configure ZSH config files"
+
+if [ -f ~/.zshrc ]; then
+	mv ~/.zshrc ~/.zshrc.old
+fi
+ln -s ~/.settings/oh-my-zsh/.zshrc ~/.zshrc
+
+if [ -f oh-my-zsh/.zsh_history ]; then
+	mv ~/.zsh_history ~/.settings/oh-my-zsh/.zsh_history
+	ln -s ~/.settings/oh-my-zsh/.zsh_history ~/.zsh_history
+else
+	touch ~/.settings/oh-my-zsh/.zsh_history
+fi
+
+### Symfony shortcut ###
+# https://gist.github.com/275690
+echo "Install symfony shortcut"
+
+if [ "$(id -u)" != "0" ]; then
+	cp $SETTINGS_DIR/symfony.sh /usr/local/bin/sf
+	chmod +x /usr/local/bin/sf
+else
+	echo "You have to be root"
+fi

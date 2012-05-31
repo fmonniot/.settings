@@ -1,5 +1,5 @@
 Contains all my configuration
 
-For Installation :
+For Installation (only one) :
 bash << (curl -s https://raw.github.com/francoismonniot/.settings/master/install.sh)
 bash << (wget -q https://raw.github.com/francoismonniot/.settings/master/install.sh)

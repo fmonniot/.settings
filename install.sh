@@ -9,9 +9,9 @@
 # Create all symlinks needed for personnalized configuration
 #
 SETTINGS_DIR="$HOME/.settings"
-echo $SETTINGS_DIR
+RVM_DIR="$HOME/.rvm"
 
-### GIT CONFIG
+### GIT Initialization
 hash git 2>&- || { echo >&2 "Missing Git!"; exit 1; }
 
 if [ ! -d $SETTINGS_DIR ]; then
@@ -46,3 +46,11 @@ if [ "$(id -u)" != "0" ]; then
 else
 	echo "You have to be root"
 fi
+
+
+### RVM Installation ###
+
+hash curl 2>&- || { echo >&2 "Missing curl!"; exit 1; }
+
+curl -L get.rvm.io | bash -s stable
+

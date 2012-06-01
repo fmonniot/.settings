@@ -27,13 +27,13 @@ echo "Configure ZSH config files"
 if [ -f ~/.zshrc ]; then
 	mv ~/.zshrc ~/.zshrc.old
 fi
-ln -s ~/.settings/oh-my-zsh/.zshrc ~/.zshrc
+ln -s $SETTINGS_DIR/oh-my-zsh/.zshrc ~/.zshrc
 
-if [ -f oh-my-zsh/.zsh_history ]; then
+if [ -f $SETTINGS_DIR/.zsh_history ]; then
 	mv ~/.zsh_history ~/.settings/oh-my-zsh/.zsh_history
-	ln -s ~/.settings/oh-my-zsh/.zsh_history ~/.zsh_history
+	ln -s $SETTINGS_DIR/oh-my-zsh/.zsh_history ~/.zsh_history
 else
-	touch ~/.settings/oh-my-zsh/.zsh_history
+	touch $SETTINGS_DIR/oh-my-zsh/.zsh_history
 fi
 
 ### Symfony shortcut ###
@@ -54,3 +54,4 @@ hash curl 2>&- || { echo >&2 "Missing curl!"; exit 1; }
 
 curl -L get.rvm.io | bash -s stable
 
+ln -s $SETTINGS_DIR/.gemrc $HOME/.gemrc

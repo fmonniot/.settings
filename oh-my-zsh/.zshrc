@@ -42,3 +42,5 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 [[ -s "/opt/android-sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-sdk/platform-tools"
 [[ -s "/opt/android-sdk/tools" ]] && export PATH=$PATH:"/opt/android-sdk/tools"
 
+# Update system variable
+export EDITOR="nano"

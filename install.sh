@@ -47,6 +47,16 @@ else
 	echo "You have to be root"
 fi
 
+### Remove ~ shortcut ###
+echo "Install rm~ (remove tilde) shortcut"
+
+if [ "$(id -u)" != "0" ]; then
+        cp $SETTINGS_DIR/rm~.sh /usr/local/bin/rm~
+        chmod +x /usr/local/bin/rm~
+else
+        echo "You have to be root"
+fi
+
 
 ### RVM Installation ###
 

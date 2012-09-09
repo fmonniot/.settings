@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.settings/oh-my-zsh
+SETTINGS=$HOME/.settings
+ZSH=$SETTINGS/oh-my-zsh
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -37,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 #rvm --default use 1.9.3@global
 
 # Customize the PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$SETTINGS/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
 [[ -s "/opt/android-sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-sdk/platform-tools"
 [[ -s "/opt/android-sdk/tools" ]] && export PATH=$PATH:"/opt/android-sdk/tools"

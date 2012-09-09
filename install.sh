@@ -36,28 +36,6 @@ else
 	touch $SETTINGS_DIR/oh-my-zsh/.zsh_history
 fi
 
-### Symfony shortcut ###
-# https://gist.github.com/275690
-echo "Install symfony shortcut"
-
-if [ "$(id -u)" != "0" ]; then
-	cp $SETTINGS_DIR/symfony.sh /usr/local/bin/sf
-	chmod +x /usr/local/bin/sf
-else
-	echo "You have to be root"
-fi
-
-### Remove ~ shortcut ###
-echo "Install rm~ (remove tilde) shortcut"
-
-if [ "$(id -u)" != "0" ]; then
-        cp $SETTINGS_DIR/rm~.sh /usr/local/bin/rm~
-        chmod +x /usr/local/bin/rm~
-else
-        echo "You have to be root"
-fi
-
-
 ### RVM Installation ###
 
 hash curl 2>&- || { echo >&2 "Missing curl!"; exit 1; }

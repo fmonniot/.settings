@@ -1,0 +1,7 @@
+find ./ -name '*~' -print -or -name ".*~"  -print
+echo Are you sure you want to delete these files ? [y/n]
+read confirm
+
+if [[ $confirm == y ]]; then
+  find ./ -name '*~' -exec rm '{}' \; -print -or -name ".*~" -exec rm {} \; -print
+fi

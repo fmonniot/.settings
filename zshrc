@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 SETTINGS=$HOME/.settings
-ZSH=$HOME/.oh-my-zsh
+ZSH=$SETTINGS/oh-my-zsh
 
 # source rvm if exist
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

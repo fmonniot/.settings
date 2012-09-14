@@ -36,6 +36,14 @@ if [ -f ~/.zsh_history ]; then
 fi
 ln -s $SETTINGS_DIR/zsh_history ~/.zsh_history
 
+### Git global config  ###
+echo "Configure git preferences"
+
+if [ -f ~/.gitconfig ]; then
+	mv ~/.gitconfig mv ~/.gitconfig.old
+fi
+ln -s $SETTINGS_DIR/gitconfig ~/.gitconfig
+
 ### RVM Installation ###
 
 hash curl 2>&- || { echo >&2 "Missing curl!"; exit 1; }

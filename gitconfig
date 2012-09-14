@@ -1,0 +1,7 @@
+[user]
+	name = François Monniot
+	email = francoismonniot@gmail.com
+[core]
+	editor = nano -w
+[color]
+	ui = true

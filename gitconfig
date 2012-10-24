@@ -5,3 +5,5 @@
 	editor = nano -w
 [color]
 	ui = true
+[push]
+	default = simple

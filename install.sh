@@ -51,3 +51,8 @@ hash curl 2>&- || { echo >&2 "Missing curl!"; exit 1; }
 curl -L get.rvm.io | bash -s stable
 
 ln -s $SETTINGS_DIR/.gemrc $HOME/.gemrc
+
+### Gnome shell personalization
+
+# The secondary monitor not longer stay fixed
+gsettings set org.gnome.shell.overrides workspaces-only-on-primary false

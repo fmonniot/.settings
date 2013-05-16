@@ -1,5 +1,5 @@
 find ./ -name '*~' -print -or -name ".*~"  -print
-echo Are you sure you want to delete these files ? [y/n]
+echo Are you sure you want to delete these files ? [y/N]
 read confirm
 
 if [[ $confirm == y ]]; then

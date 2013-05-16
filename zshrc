@@ -42,6 +42,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$SETTIN
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
 [[ -s "/opt/android-sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-sdk/platform-tools"
 [[ -s "/opt/android-sdk/tools" ]] && export PATH=$PATH:"/opt/android-sdk/tools"
+[[ -s "/opt/android-studio/sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/platform-tools"
+[[ -s "/opt/android-studio/sdk/tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/tools"
 
 # Set default editor
 export EDITOR="nano" 

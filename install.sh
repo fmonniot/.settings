@@ -56,3 +56,7 @@ ln -s $SETTINGS_DIR/.gemrc $HOME/.gemrc
 
 # The secondary monitor not longer stay fixed
 gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
+
+# Add solarized theme for gnome-terminal
+bash $SETTINGS_DIR/set_dark.sh
+

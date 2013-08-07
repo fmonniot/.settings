@@ -46,5 +46,12 @@ export PATH=$PATH:$SETTINGS/bin
 [[ -s "/opt/android-studio/sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/platform-tools"
 [[ -s "/opt/android-studio/sdk/tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/tools"
 
+PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+
 # Set default editor
-export EDITOR="nano" 
+export EDITOR="nano"
+
+
+# Configure gradle
+# export GRADLE_HOME=$HOME/gradle-1.6
+# PATH=$PATH:$GRADLE_HOME/bin

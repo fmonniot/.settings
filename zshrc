@@ -38,7 +38,8 @@ plugins=(git fabric git-flow pip symfony2 ruby rvm gem rails3 bundler cp systemd
 source $ZSH/oh-my-zsh.sh
 
 # Customize the PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$SETTINGS/bin
+export PATH=$PATH:$SETTINGS/bin
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
 [[ -s "/opt/android-sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-sdk/platform-tools"
 [[ -s "/opt/android-sdk/tools" ]] && export PATH=$PATH:"/opt/android-sdk/tools"

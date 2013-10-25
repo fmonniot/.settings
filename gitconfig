@@ -3,6 +3,7 @@
 	email = francoismonniot@gmail.com
 [core]
 	editor = nano -w
+	autocrlf = input
 [color]
 	ui = true
 [push]

@@ -7,3 +7,5 @@
 	ui = true
 [push]
 	default = simple
+[alias]
+	publish = !sh -c \"/usr/local/bin/git-publish-pages $*\"

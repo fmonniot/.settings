@@ -11,10 +11,6 @@ ZSH=$SETTINGS/oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="arrow"
 
-# Example aliases
-alias zshconfig="nano ~/.zshrc"
-alias gitg="gitg 2>/dev/null &"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -51,7 +47,4 @@ PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 # Set default editor
 export EDITOR="nano" 
 
-# Aliases
 
-alias start-vpn-minet="sudo systemctl start openvpn@minet.service"
-alias stop-vpn-minet="sudo systemctl stop openvpn@minet.service"

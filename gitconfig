@@ -9,4 +9,4 @@
 [push]
 	default = simple
 [alias]
-	publish = !sh -c \"/usr/local/bin/git-publish-pages $*\"
+	publish-pages = !sh -c \"git-publish-pages $*\"

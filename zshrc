@@ -23,10 +23,6 @@ fpath=($SETTINGS/gcloud-zsh-completion/src $fpath)
 # time that oh-my-zsh is loaded.
 ZSH_THEME="arrow"
 
-# Example aliases
-alias zshconfig="nano ~/.zshrc"
-alias gitg="gitg 2>/dev/null &"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 

@@ -2,20 +2,20 @@
 SETTINGS=$HOME/.settings
 ZSH=$SETTINGS/oh-my-zsh
 
+# source rvm if exist and add it to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
+
 # Customize the PATH
 export PATH=$PATH:$SETTINGS/bin
 
-  # source rvm if exist and add it to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
-
-  # Load android sdk (classic and/or studio)
+# Load android sdk (classic and/or studio)
 [[ -s "/opt/android-sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-sdk/platform-tools"
 [[ -s "/opt/android-sdk/tools" ]] && export PATH=$PATH:"/opt/android-sdk/tools"
 [[ -s "/opt/android-studio/sdk/platform-tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/platform-tools"
 [[ -s "/opt/android-studio/sdk/tools" ]] && export PATH=$PATH:"/opt/android-studio/sdk/tools"
 
-# Set default editor
-export EDITOR="nano"
+# Auto completion for the gcloud && appcfg.py commands in Google Cloud SDK
+fpath=($SETTINGS/gcloud-zsh-completion/src $fpath)
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -23,11 +23,15 @@ export EDITOR="nano"
 # time that oh-my-zsh is loaded.
 ZSH_THEME="arrow"
 
+# Example aliases
+alias zshconfig="nano ~/.zshrc"
+alias gitg="gitg 2>/dev/null &"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -43,7 +47,24 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git fabric git-flow pip symfony2 ruby rvm gem rails3 bundler cp systemd)
 
-
+# Sourcing Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Set default editor
+export EDITOR="nano"
+
+# Maven configuration
+export M2_HOME=/opt/maven
+export M2=$M2_HOME/bin
+
+export PATH=$M2:$PATH
+
+# Chrome config
+export CHROME_BIN=/usr/bin/chromium
+
+# Use python 2 for the sdk
+export CLOUDSDK_PYTHON=/usr/bin/python2
+
+# The next line updates PATH for the Google Cloud SDK.
+source /home/francois/google-cloud-sdk/path.zsh.inc
 

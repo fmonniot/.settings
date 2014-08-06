@@ -36,6 +36,14 @@ if [ -f ~/.zsh_history ]; then
 fi
 ln -s $SETTINGS_DIR/zsh_history ~/.zsh_history
 
+
+### npm user configuration ###
+echo "Configure NPM config files"
+if [ -f ~/.npmrc ]; then
+	mv ~/.npmrc ~/.npmrc.old
+fi
+ln -s $SETTINGS_DIR/npmrc ~/.npmrc
+
 ### Git global config  ###
 echo "Configure git preferences"
 

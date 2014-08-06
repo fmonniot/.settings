@@ -4,6 +4,3 @@
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-[submodule "gcloud-zsh-completion"]
-	path = gcloud-zsh-completion
-	url = https://github.com/littleq0903/gcloud-zsh-completion.git

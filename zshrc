@@ -2,9 +2,6 @@
 SETTINGS=$HOME/.settings
 ZSH=$SETTINGS/oh-my-zsh
 
-# source rvm if exist and add it to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH=$PATH:"$HOME/.rvm/bin"
-
 # Customize the PATH
 export PATH=$PATH:$SETTINGS/bin
 
@@ -49,6 +46,9 @@ source $ZSH/oh-my-zsh.sh
 # Set default editor
 export EDITOR="nano"
 
+# Archlinux Java configuration
+export JAVA_HOME=/usr/lib/jvm/default
+
 # Maven configuration
 export M2_HOME=/opt/maven
 export M2=$M2_HOME/bin
@@ -62,5 +62,13 @@ export CHROME_BIN=/usr/bin/chromium
 export CLOUDSDK_PYTHON=/usr/bin/python2
 
 # The next line updates PATH for the Google Cloud SDK.
-source /home/francois/google-cloud-sdk/path.zsh.inc
+source $HOME/google-cloud-sdk/path.zsh.inc
+source $HOME/google-cloud-sdk/completion.zsh.inc
 
+# Configure Go
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
+# source rvm if exist and add it to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/home/francois/.gvm/scripts/gvm" ]] && source "/home/francois/.gvm/scripts/gvm"

@@ -4,6 +4,7 @@
 [core]
 	editor = nano -w
 	autocrlf = input
+	excludesfile = ~/.gitignore-global
 [color]
 	ui = true
 [push]

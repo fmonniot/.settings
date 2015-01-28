@@ -67,7 +67,8 @@ source $HOME/google-cloud-sdk/completion.zsh.inc
 
 # Configure Go
 export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 # source rvm if exist and add it to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

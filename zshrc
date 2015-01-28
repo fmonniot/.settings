@@ -72,3 +72,8 @@ export PATH=$PATH:$GOPATH/bin
 # source rvm if exist and add it to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "/home/francois/.gvm/scripts/gvm" ]] && source "/home/francois/.gvm/scripts/gvm"
+
+
+# Hack for new grep version
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
